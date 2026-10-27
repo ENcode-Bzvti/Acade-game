@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retro Arcade Dual-Pack</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#home">RETRO ARCADE</a>
+  <nav>
+    <a href="#memory">Memory Matrix</a>
+    <a href="#reflex">Speed Reflex</a>
+    <button id="musicBtn" type="button">Music: Off</button>
+  </nav>
+</header>
+<audio id="bgm" loop src="assets/background.mp3"></audio>
+
+<main>
+  <!-- LANDING -->
+  <section id="home" class="page">
+    <h1>Two games.<br>One coin slot.</h1>
+    <p class="lead">Test your memory, then test your reflexes. Pick a cabinet to start.</p>
+    <div class="cabinets">
+      <a class="cab pink" href="#memory">
+        <h2>Memory Matrix</h2>
+        <p>Watch the tiles light up, then repeat the pattern. It gets longer every round.</p>
+      </a>
+      <a class="cab teal" href="#reflex">
+        <h2>Speed Reflex</h2>
+        <p>Hit as many targets as you can in 30 seconds. Your reaction time is shown in milliseconds.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- GAME 1 -->
+  <section id="memory" class="page game">
+    <h2>Memory Matrix</h2>
+    <p class="how">How to play: press Start and watch the tiles flash. Click them in the same order. Each correct round adds one more step. One wrong tile ends the game.</p>
+    <div class="stats">
+      <div>Score <b id="mScore">0</b></div>
+      <div>Best <b id="mBest">0</b></div>
+    </div>
+    <p id="mStatus" class="status" aria-live="polite">Press Start to play.</p>
+    <div class="grid">
+      <button class="tile t0" data-i="0" aria-label="Red tile"></button>
+      <button class="tile t1" data-i="1" aria-label="Blue tile"></button>
+      <button class="tile t2" data-i="2" aria-label="Yellow tile"></button>
+      <button class="tile t3" data-i="3" aria-label="Green tile"></button>
+    </div>
+    <div class="actions">
+      <button id="mStart" class="btn">Start</button>
+      <button id="mRestart" class="btn ghost">Restart</button>
+      <a class="btn ghost" href="#home">Back to menu</a>
+    </div>
+  </section>
+
+  <!-- GAME 2 -->
+  <section id="reflex" class="page game">
+    <h2>Speed Reflex</h2>
+    <p class="how">How to play: press Start, then click the glowing target as fast as you can. It jumps after every hit. You have 30 seconds.</p>
+    <div class="stats">
+      <div>Time <b id="rTime">30.0</b></div>
+      <div>Score <b id="rScore">0</b></div>
+      <div>Last <b id="rLast">- ms</b></div>
+      <div>Average <b id="rAvg">- ms</b></div>
+      <div>Best <b id="rBest">0</b></div>
+    </div>
+    <p id="rStatus" class="status" aria-live="polite">Press Start to play.</p>
+    <div id="arena"><button id="target" aria-label="Target"></button></div>
+    <div class="actions">
+      <button id="rStart" class="btn">Start</button>
+      <button id="rRestart" class="btn ghost">Restart</button>
+      <a class="btn ghost" href="#home">Back to menu</a>
+    </div>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
