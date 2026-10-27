@@ -21,7 +21,6 @@ Put your own audio file at `assets/background.mp3` and press the **Music** butto
 | `index.html` | Page structure and both games' markup |
 | `style.css` | All styling, colours and page switching |
 | `script.js` | Game logic, sound and music |
-| `EDITS_README.md` | Guide to changing things and explaining the code |
 
 ## Tech
 HTML5, CSS3, vanilla JavaScript.
